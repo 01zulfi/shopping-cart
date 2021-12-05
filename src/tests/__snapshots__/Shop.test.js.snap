@@ -6,7 +6,136 @@ exports[`shop renders 1`] = `
 >
   <div
     class="item-div"
-    data-id="1"
-  />
+    data-id="929690163651"
+  >
+    <hr />
+    <p
+      class="asteroid-name"
+    >
+      Name : 
+      1 Ceres
+    </p>
+    <p
+      class="asteroid-price"
+    >
+      Price: 
+      253
+    </p>
+    <hr />
+  </div>
+  <div
+    class="item-div"
+    data-id="1087749115134"
+  >
+    <hr />
+    <p
+      class="asteroid-name"
+    >
+      Name : 
+      4 Vesta
+    </p>
+    <p
+      class="asteroid-price"
+    >
+      Price: 
+      299
+    </p>
+    <hr />
+  </div>
+  <div
+    class="item-div"
+    data-id="1571566611319"
+  >
+    <hr />
+    <p
+      class="asteroid-name"
+    >
+      Name : 
+      25143 Itokawa
+    </p>
+    <p
+      class="asteroid-price"
+    >
+      Price: 
+      99
+    </p>
+    <hr />
+  </div>
+  <div
+    class="item-div"
+    data-id="1609504519321"
+  >
+    <hr />
+    <p
+      class="asteroid-name"
+    >
+      Name : 
+      243 Ida
+    </p>
+    <p
+      class="asteroid-price"
+    >
+      Price: 
+      147
+    </p>
+    <hr />
+  </div>
+  <div
+    class="item-div"
+    data-id="1127451067498"
+  >
+    <hr />
+    <p
+      class="asteroid-name"
+    >
+      Name : 
+      433 Eros
+    </p>
+    <p
+      class="asteroid-price"
+    >
+      Price: 
+      444
+    </p>
+    <hr />
+  </div>
+  <div
+    class="item-div"
+    data-id="1537400753523"
+  >
+    <hr />
+    <p
+      class="asteroid-name"
+    >
+      Name : 
+      253 Mathilde
+    </p>
+    <p
+      class="asteroid-price"
+    >
+      Price: 
+      121
+    </p>
+    <hr />
+  </div>
+  <div
+    class="item-div"
+    data-id="1346157135505"
+  >
+    <hr />
+    <p
+      class="asteroid-name"
+    >
+      Name : 
+      101955 Bennu
+    </p>
+    <p
+      class="asteroid-price"
+    >
+      Price: 
+      191
+    </p>
+    <hr />
+  </div>
 </div>
 `;

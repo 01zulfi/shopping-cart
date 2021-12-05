@@ -8,8 +8,17 @@ test("shop renders", () => {
   expect(container.firstChild).toHaveClass("shop");
 });
 
-test("at least one item renders", () => {
+test("items render", () => {
   const { container } = render(<Shop />);
-  const item = container.querySelector(".item-div");
-  expect(item).toBeInTheDocument();
+  const item = container.querySelectorAll(".item-div");
+  expect(item).toHaveLength(7);
+});
+
+test("first asteroid renders correct info", () => {
+  const { container } = render(<Shop />);
+  const firstName = container.querySelector(".asteroid-name");
+  const firstPrice = container.querySelector(".asteroid-price");
+
+  expect(firstName).toHaveTextContent("1 Ceres");
+  expect(firstPrice).toHaveTextContent("253");
 });
