@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router";
 import asteroids from "../asteroids";
+import cart from "../CartManager";
 
 const ItemPage = () => {
   const params = useParams();
@@ -10,10 +11,21 @@ const ItemPage = () => {
 
   if (!targetAsteroid) return null;
 
+  const addToCart = () => {
+    cart.add(targetAsteroid);
+  };
+
   return (
     <section className="item-page-section">
       <h1 className="asteroid-name">{targetAsteroid.name}</h1>
-      <p className="asteroid-price"></p>
+      <p className="asteroid-price">{targetAsteroid.price}</p>
+      <button
+        data-id={targetAsteroid.id}
+        className="add-to-cart-button"
+        onClick={addToCart}
+      >
+        Add to cart
+      </button>
     </section>
   );
 };
