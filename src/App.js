@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
@@ -7,17 +7,22 @@ import ItemPage from "./components/ItemPage";
 import CartPage from "./components/CartPage";
 
 function App() {
+  const [cartLength, setCartLength] = useState(0);
+
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="*" element={<Navbar />} />
+          <Route path="*" element={<Navbar cartLength={cartLength} />} />
         </Routes>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="shop" element={<Shop />} />
-          <Route path="shop/asteroid/:name" element={<ItemPage />} />
+          <Route
+            path="shop/asteroid/:name"
+            element={<ItemPage setCartLength={setCartLength} />}
+          />
           <Route path="shop/cart" element={<CartPage />} />
           <Route path="*" element={<h1>Nothing here</h1>} />
         </Routes>

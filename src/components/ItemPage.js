@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import asteroids from "../asteroids";
 import cart from "../CartManager";
 
-const ItemPage = () => {
+const ItemPage = ({ setCartLength }) => {
   const params = useParams();
   const targetAsteroid = asteroids.find(
     (asteroid) => asteroid.urlName === params.name
@@ -13,6 +13,7 @@ const ItemPage = () => {
 
   const addToCart = () => {
     cart.add(targetAsteroid);
+    setCartLength(cart.cartLength);
   };
 
   return (
