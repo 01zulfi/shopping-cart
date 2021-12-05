@@ -8,8 +8,22 @@ const CartManager = () => {
     );
   };
 
-  const add = (item) => {
-    cart = [...cart, { ...item, quantity: 1 }];
+  const cartLength = () => {
+    return cart.reduce((sum, item) => sum + item.quantity, 0);
+  };
+
+  const _find = (id) => {
+    return cart.find((item) => item.id === id);
+  };
+
+  const add = (itemToAdd) => {
+    const targetItem = _find(itemToAdd.id);
+    if (targetItem) {
+      targetItem.quantity = targetItem.quantity + 1;
+      return;
+    }
+
+    cart = [...cart, { ...itemToAdd, quantity: 1 }];
   };
 
   const remove = (id) => {
@@ -17,7 +31,7 @@ const CartManager = () => {
   };
 
   const find = (id) => {
-    const targetItem = cart.find((item) => item.id === id);
+    const targetItem = _find(id);
 
     return {
       incrementQuantity() {
@@ -42,6 +56,9 @@ const CartManager = () => {
     },
     get total() {
       return total();
+    },
+    get cartLength() {
+      return cartLength();
     },
     add,
     remove,
