@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`item page renders 1`] = `
+<div>
+  <section
+    class="item-page-section"
+  >
+    <h1
+      class="asteroid-name"
+    />
+    <p
+      class="asteroid-price"
+    >
+      Price: 
+    </p>
+  </section>
+</div>
+`;
