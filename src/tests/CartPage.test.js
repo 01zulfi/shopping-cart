@@ -4,7 +4,7 @@ import "@testing-library/jest-dom";
 import CartPage from "../components/CartPage";
 
 test("cart renders", () => {
-  const { container } = render(<Cart />);
+  const { container } = render(<CartPage />);
   expect(container).toMatchSnapshot();
   expect(container.firstChild).toHaveClass("cart");
 });
