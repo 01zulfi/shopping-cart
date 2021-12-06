@@ -1,13 +1,23 @@
 import React from "react";
 import cart from "../CartManager";
 
-const Cart = () => {
+const CartPage = () => {
+  const cartItem = ({ name, price, id }) => {
+    return (
+      <div className="cart-item-div" key={id}>
+        <h2>{name}</h2>
+        <p>{price}</p>
+      </div>
+    );
+  };
+
   return (
     <div className="cart">
       <h1>Cart</h1>
-      {JSON.stringify(cart.cart)}
+      {cart.cart.map((item) => cartItem(item))}
+      <h3>{cart.total}</h3>
     </div>
   );
 };
 
-export default Cart;
+export default CartPage;
