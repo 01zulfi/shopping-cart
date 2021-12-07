@@ -8,7 +8,9 @@ exports[`cart renders 1`] = `
     <h1>
       Cart
     </h1>
-    []
+    <h3>
+      0
+    </h3>
   </div>
 </div>
 `;
