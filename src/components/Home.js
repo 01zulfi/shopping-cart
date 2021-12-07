@@ -1,13 +1,22 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const clickHandler = () => {
+    navigate("/shop");
+  };
+
   return (
     <section className="home">
       <section className="front-section">
         <div className="about-div">
           <h2 className="about-heading">Asteroids</h2>
           <p className="about-text">Best asteroids in town</p>
-          <button className="shop-button">Shop now</button>
+          <button className="shop-button" onClick={clickHandler}>
+            Shop now
+          </button>
         </div>
         <div className="rotating-image">
           <p className="rotating-image-text">Asteroid of the week</p>
@@ -25,7 +34,7 @@ const Home = () => {
         <div className="review-two">Excellent</div>
       </section>
       <div className="shop-button-div">
-        <button className="shop-button-two">
+        <button className="shop-button-two" onClick={clickHandler}>
           Get your favorite asteroid now
         </button>
       </div>
