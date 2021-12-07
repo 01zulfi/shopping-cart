@@ -23,7 +23,10 @@ function App() {
             path="shop/asteroid/:name"
             element={<ItemPage setCartLength={setCartLength} />}
           />
-          <Route path="shop/cart" element={<CartPage />} />
+          <Route
+            path="shop/cart"
+            element={<CartPage setCartLength={setCartLength} />}
+          />
           <Route path="*" element={<h1>Nothing here</h1>} />
         </Routes>
       </BrowserRouter>

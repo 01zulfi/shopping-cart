@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import cart from "../CartManager";
 
-const CartItem = ({ name, price, id, quantity, setTotalHandler }) => {
+const CartItem = ({
+  name,
+  price,
+  id,
+  quantity,
+  setTotalHandler,
+  setCartLength,
+}) => {
   const [stateQuantity, setStateQuantity] = useState(quantity);
   const [spanMessage, setSpanMessage] = useState("");
 
@@ -10,6 +17,7 @@ const CartItem = ({ name, price, id, quantity, setTotalHandler }) => {
     setSpanMessage("");
     cart.decrementQuantity(id);
     setTotalHandler(cart.total);
+    setCartLength(cart.cartLength);
     setStateQuantity(cart.find(id).quantity);
   };
 
@@ -17,6 +25,7 @@ const CartItem = ({ name, price, id, quantity, setTotalHandler }) => {
     setSpanMessage("");
     cart.incrementQuantity(id);
     setTotalHandler(cart.total);
+    setCartLength(cart.cartLength);
     setStateQuantity(cart.find(id).quantity);
   };
 
@@ -29,6 +38,7 @@ const CartItem = ({ name, price, id, quantity, setTotalHandler }) => {
     setSpanMessage("");
     cart.setQuantity(id, event.target.value);
     setTotalHandler(cart.total);
+    setCartLength(cart.cartLength);
     setStateQuantity(cart.find(id).quantity);
   };
 

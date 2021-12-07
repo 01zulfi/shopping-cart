@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CartItem from "./CartItem";
 import cart from "../CartManager";
 
-const CartPage = () => {
+const CartPage = ({ setCartLength }) => {
   const [items, setItems] = useState(cart.cart);
   const [total, setTotal] = useState(cart.total);
 
@@ -11,6 +11,7 @@ const CartPage = () => {
   const deleteButtonHandler = (event) => {
     const id = Number(event.target.getAttribute("data-id"));
     cart.remove(id);
+    setCartLength(cart.cartLength);
     setTotalHandler(cart.total);
     setItems(cart.cart);
   };
@@ -24,6 +25,7 @@ const CartPage = () => {
           id={item.id}
           quantity={item.quantity}
           setTotalHandler={setTotalHandler}
+          setCartLength={setCartLength}
         />
         <button
           data-id={item.id}
