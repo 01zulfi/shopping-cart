@@ -8,6 +8,10 @@ test("adds item", () => {
   expect(cart.cart).toHaveLength(3);
 });
 
+test("finds item", () => {
+  expect(cart.find(1)).toHaveProperty("name", "one");
+});
+
 test("adds quantity property to items", () => {
   expect(cart.cart[0].quantity).toBe(1);
   expect(cart.cart[1].quantity).toBe(1);
@@ -23,7 +27,7 @@ test("total is correct", () => {
 });
 
 test("increments quantity", () => {
-  cart.find(1).incrementQuantity();
+  cart.incrementQuantity(1);
   expect(cart.cart[0].quantity).toBe(2);
 
   expect(cart.total).toBe(32);
@@ -46,17 +50,23 @@ test("removes item", () => {
 });
 
 test("decrements quantity", () => {
-  cart.find(1).decrementQuantity();
+  cart.decrementQuantity(1);
   expect(cart.cart[0].quantity).toBe(1);
 
   expect(cart.total).toBe(12);
 });
 
 test("removes item if quantity 0", () => {
-  cart.find(1).decrementQuantity();
+  cart.decrementQuantity(1);
   const itemOne = cart.cart.find((item) => item.name === "one");
   expect(itemOne).toBeUndefined();
 
   expect(cart.total).toBe(2);
   expect(cart.cartLength).toBe(2);
+});
+
+test("sets quantity", () => {
+  cart.setQuantity(3, 10);
+  expect(cart.total).toBe(10);
+  expect(cart.cartLength).toBe(10);
 });

@@ -30,22 +30,24 @@ const CartManager = () => {
     cart = cart.filter((item) => item.id !== id);
   };
 
-  const find = (id) => {
+  const incrementQuantity = (id) => {
     const targetItem = _find(id);
+    targetItem.quantity = targetItem.quantity + 1;
+  };
 
-    return {
-      incrementQuantity() {
-        targetItem.quantity = targetItem.quantity + 1;
-      },
-      decrementQuantity() {
-        if (targetItem.quantity === 1) {
-          remove(id);
-          return;
-        }
+  const decrementQuantity = (id) => {
+    const targetItem = _find(id);
+    if (targetItem.quantity === 1) {
+      remove(id);
+      return;
+    }
 
-        targetItem.quantity = targetItem.quantity - 1;
-      },
-    };
+    targetItem.quantity = targetItem.quantity - 1;
+  };
+
+  const setQuantity = (id, quantity) => {
+    const targetItem = _find(id);
+    targetItem.quantity = quantity;
   };
 
   return {
@@ -60,9 +62,15 @@ const CartManager = () => {
     get cartLength() {
       return cartLength();
     },
+    find(id) {
+      const targetItem = _find(id);
+      return { ...targetItem };
+    },
     add,
     remove,
-    find,
+    incrementQuantity,
+    decrementQuantity,
+    setQuantity,
   };
 };
 
