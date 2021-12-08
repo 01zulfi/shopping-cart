@@ -5,12 +5,13 @@ import Navbar from "./components/Navbar";
 import Shop from "./components/Shop";
 import ItemPage from "./components/ItemPage";
 import CartPage from "./components/CartPage";
+import "./styles/App.css";
 
 function App() {
   const [cartLength, setCartLength] = useState(0);
 
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<Navbar cartLength={cartLength} />} />
