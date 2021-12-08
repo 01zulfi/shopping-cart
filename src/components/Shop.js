@@ -1,6 +1,7 @@
 import React from "react";
 import asteroids from "../asteroids";
 import { useNavigate } from "react-router";
+import "../styles/Shop.css";
 
 const Shop = () => {
   const navigate = useNavigate();
@@ -13,16 +14,13 @@ const Shop = () => {
   };
 
   const item = (asteroid) => (
-    <div
-      onClick={navigateRoute}
-      key={asteroid.id}
-      className="item-div"
-      data-id={asteroid.id}
-    >
-      <hr />
-      <p className="asteroid-name">Name : {asteroid.name}</p>
+    <div key={asteroid.id} className="item-div">
+      <h2 className="asteroid-name">{asteroid.name}</h2>
       <p className="asteroid-price">Price: {asteroid.price}</p>
-      <hr />
+      <img src={asteroid.imgSrc} alt="asteroid" />
+      <button data-id={asteroid.id} onClick={navigateRoute}>
+        Buy {asteroid.name}
+      </button>
     </div>
   );
 
