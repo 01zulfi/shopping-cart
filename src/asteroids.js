@@ -121,7 +121,7 @@ const asteroids = [
     id: uniqueId(),
     imgSrc: bennu,
     source: "https://en.wikipedia.org/wiki/101955_Bennu",
-    des: `101955 Bennu (provisional designation 1999 RQ36) is a carbonaceous
+    desc: `101955 Bennu (provisional designation 1999 RQ36) is a carbonaceous
     asteroid in the Apollo group discovered by the LINEAR Project on 
     11 September 1999. It is a potentially hazardous object that is listed on
     the Sentry Risk Table and tied for the highest cumulative rating on the
