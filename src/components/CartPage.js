@@ -39,11 +39,24 @@ const CartPage = ({ setCartLength }) => {
     );
   };
 
+  const removeCartItems = () => {
+    const cartItems = document.body.querySelector(".cart-item-wrapper");
+    if (cartItems) cartItems.remove();
+  };
+
+  const checkoutHandler = () => {
+    cart.clear();
+    setCartLength(cart.cartLength);
+    setTotalHandler(cart.total);
+    removeCartItems();
+  };
+
   return (
     <div className="cart">
       <h1>Cart</h1>
       {items.map(mapCallback)}
       <h3>{total}</h3>
+      <button onClick={checkoutHandler}>Checkout</button>
     </div>
   );
 };
