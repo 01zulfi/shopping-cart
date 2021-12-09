@@ -50,6 +50,8 @@ const CartManager = () => {
     targetItem.quantity = quantity;
   };
 
+  const clear = () => (cart = []);
+
   return {
     get cart() {
       return cart.map((item) => {
@@ -71,6 +73,7 @@ const CartManager = () => {
     incrementQuantity,
     decrementQuantity,
     setQuantity,
+    clear,
   };
 };
 

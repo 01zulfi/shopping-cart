@@ -70,3 +70,9 @@ test("sets quantity", () => {
   expect(cart.total).toBe(10);
   expect(cart.cartLength).toBe(10);
 });
+
+test("clears cart", () => {
+  cart.clear();
+  expect(cart.total).toBe(0);
+  expect(cart.cartLength).toBe(0);
+});
