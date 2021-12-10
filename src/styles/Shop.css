@@ -54,3 +54,24 @@ div.shop {
     background-color: #ab47bc;
   }
 }
+
+.shop .item-div button:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  div.shop {
+    width: 85%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .shop .item-div {
+    width: 26%;
+    margin: 25px;
+    justify-content: space-between;
+  }
+}
