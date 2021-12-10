@@ -73,3 +73,26 @@ div.content button {
     background-color: #ab47bc;
   }
 }
+
+div.content button:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+div.content a:hover {
+  color: #ab47bc;
+}
+
+@media (min-width: 768px) {
+  section.item-page-section {
+    width: 75%;
+  }
+
+  div.content {
+    width: 85%;
+  }
+
+  section.item-page-section img {
+    width: 45%;
+  }
+}
