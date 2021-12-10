@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import cart from "../CartManager";
+import "../styles/CartItem.css";
 
 const CartItem = ({
   name,
@@ -44,24 +45,32 @@ const CartItem = ({
 
   return (
     <div className="cart-item-div" key={id}>
-      <p>{name}</p>
-      <p>{price}</p>
-      <button className="decrement-button" onClick={decrementQuantity}>
-        -
-      </button>
-      <label htmlFor="quantity-input" className="quantity-input">
-        Quantity:
-        <input
-          type="number"
-          id="quantity-input"
-          onChange={setQuantity}
-          value={stateQuantity}
-        />
-      </label>
+      <div className="name-and-price">
+        <p>Name:</p>
+        <p>Price:</p>
+      </div>
+      <div className="name-and-price">
+        <p>{name}</p>
+        <p>{price}</p>
+      </div>
+      <div className="quantity-div">
+        <button className="decrement-button" onClick={decrementQuantity}>
+          -
+        </button>
+        <label htmlFor="quantity-input" className="quantity-input">
+          Quantity:
+          <input
+            type="number"
+            id="quantity-input"
+            onChange={setQuantity}
+            value={stateQuantity}
+          />
+        </label>
+        <button className="increment-button" onClick={incrementQuantity}>
+          +
+        </button>
+      </div>
       <span>{spanMessage}</span>
-      <button className="increment-button" onClick={incrementQuantity}>
-        +
-      </button>
     </div>
   );
 };

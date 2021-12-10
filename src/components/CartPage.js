@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CartItem from "./CartItem";
 import cart from "../CartManager";
+import "../styles/CartPage.css";
 
 const CartPage = ({ setCartLength }) => {
   const [items, setItems] = useState(cart.cart);
@@ -34,7 +35,6 @@ const CartPage = ({ setCartLength }) => {
         >
           Delete
         </button>
-        <hr />
       </div>
     );
   };
@@ -55,8 +55,10 @@ const CartPage = ({ setCartLength }) => {
     <div className="cart">
       <h1>Cart</h1>
       {items.map(mapCallback)}
-      <h3>{total}</h3>
-      <button onClick={checkoutHandler}>Checkout</button>
+      <div className="checkout">
+        <h2>Total: {total}</h2>
+        <button onClick={checkoutHandler}>Checkout</button>
+      </div>
     </div>
   );
 };
