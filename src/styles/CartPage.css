@@ -39,3 +39,30 @@ div.checkout button {
 div.checkout {
   width: 95%;
 }
+
+div.cart button:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  div.cart {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 75%;
+    align-items: center;
+  }
+
+  div.cart h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  div.cart-item-wrapper {
+    margin: 0 auto;
+  }
+
+  div.checkout {
+    margin-top: 35px;
+  }
+}

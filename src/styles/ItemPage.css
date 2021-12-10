@@ -85,7 +85,7 @@ div.content a:hover {
 
 @media (min-width: 768px) {
   section.item-page-section {
-    width: 75%;
+    width: 55%;
   }
 
   div.content {
