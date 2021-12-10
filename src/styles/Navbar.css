@@ -34,3 +34,12 @@ div.nav-links > ul li a {
   color: white;
   font-size: 20px;
 }
+
+li.cart-link a {
+  display: flex;
+}
+
+li.cart-link a p {
+  margin-left: 5px;
+  font-weight: bold;
+}
