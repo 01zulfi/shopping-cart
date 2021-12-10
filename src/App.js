@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="app">
-      <BrowserRouter>
+      <BrowserRouter basename="/shopping-cart">
         <Routes>
           <Route path="*" element={<Navbar cartLength={cartLength} />} />
         </Routes>
