@@ -40,8 +40,10 @@ const CartPage = ({ setCartLength }) => {
   };
 
   const removeCartItems = () => {
-    const cartItems = document.body.querySelector(".cart-item-wrapper");
-    if (cartItems) cartItems.remove();
+    const cartItems = document.body.querySelectorAll(".cart-item-wrapper");
+    if (cartItems.length > 0) {
+      cartItems.forEach((item) => item.remove());
+    }
   };
 
   const checkoutHandler = () => {
