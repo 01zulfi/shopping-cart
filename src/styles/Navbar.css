@@ -43,3 +43,28 @@ li.cart-link a p {
   margin-left: 5px;
   font-weight: bold;
 }
+
+@media (min-width: 768px) {
+  div.navbar {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  div.nav-links {
+    width: 15%;
+  }
+
+  div.nav-links ul {
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    margin-block-end: 0;
+    width: 35%;
+  }
+
+  div.nav-links > ul li {
+    margin-left: 35px;
+  }
+}
