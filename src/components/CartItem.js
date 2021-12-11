@@ -37,7 +37,7 @@ const CartItem = ({
     }
 
     setSpanMessage("");
-    cart.setQuantity(id, event.target.value);
+    cart.setQuantity(id, Number(event.target.value));
     setTotalHandler(cart.total);
     setCartLength(cart.cartLength);
     setStateQuantity(cart.find(id).quantity);
