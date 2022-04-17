@@ -55,7 +55,7 @@ const Home = () => {
             All items on our store have no shipping charges. No tax, no customs,
             pay for just the big rock. Rest assured, the asteroid will be
             shipped right to your doorstep. In case of any damages, we provide
-            money back guarantee
+            money back guarantee.
           </p>
         </div>
       </section>
@@ -74,9 +74,9 @@ const Home = () => {
         </div>
         <div className="review-two">
           <p>
-            Blazing upon entry, shiny before my eyes, so beatiful as the world
+            Blazing upon entry, shiny before my eyes, so beautiful as the world
             would end. A magnet for the eyes, feast for hearts. Pristine, and
-            certainly the most magnificent rock I've ever witnessed.
+            certainly the most magnificent rock I've ever seen.
           </p>
           <div className="review-author">
             <img src={triceratops} alt="triceratops-icon" />
