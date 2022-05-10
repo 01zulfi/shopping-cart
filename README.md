@@ -4,7 +4,7 @@ A shop site built with react and uses react router. Tested using the testing lib
 
 ## Live Demo
 
-Click [here](https://01zulfi.github.io/shopping-cart)
+[Click here](https://01zulfi.github.io/shopping-cart)
 
 ## Technologies
 
